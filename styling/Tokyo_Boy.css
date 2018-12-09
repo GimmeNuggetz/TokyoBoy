@@ -1,0 +1,51 @@
+#myCanvas{
+  position: absolute;
+  background-color: black;
+  /* background-image: url("../assets/backgrounds/japan1.gif"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 50%;
+  margin-top: 0px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.game-title{
+  /* position: absolute; */
+  z-index: 3;
+  font-size: 50px;
+  font-style: italic;
+  /* color: #Yellow; */
+  /* align-self: center; */
+  /* opacity: .5; */
+}
+
+.board{
+display: flex;
+flex-direction: column;
+}
+
+/* @-webkit-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+} */
+.game-title{
+  color: #B6FF00;
+  font-family: "Press Start 2P";
+  font-size: 2.8em;
+  /* -webkit-animation: neon4 5s ease-in-out infinite alternate; */ */
+  /* -moz-animation: neon4 1.5s ease-in-out infinite alternate; */
+  /* animation: neon4 1.5s ease-in-out infinite alternate;
+  /* animation-delay: 2s; */
+}
+
+.game-title:hover {
+  -webkit-animation: neon4 5s ease-in-out infinite alternate; */
+  -moz-animation: neon4 1.5s ease-in-out infinite alternate; */
+  /* animation: neon4 1.5s ease-in-out infinite alternate;
+  /* animation-delay: 2s;
+}
