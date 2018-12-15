@@ -5,7 +5,10 @@
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
 <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+<script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Vampiro+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 <style>
   * { padding: 0; margin: 0; }
   canvas { background: #eee; display: block; margin: 0 auto; }
@@ -15,11 +18,26 @@
 <body>
 
   <div class="board">
-    <h1 class="game-title">You, me, & Pizzaface</h1>
+    <h1 id="gametitle">You, me, & Pizzaface</h1>
 
-      <canvas id="myCanvas" width="880" height="520"></canvas>
+      <canvas id="myCanvas" width="1080" height="970"></canvas>
 
   </div>
+  <section id="overlay" class="overlay">
+     <h1 class="title2">Catch fireballs. Kill the aliens. Get the crystals, Release the girl. Defeat Pizzaface.</h1>
+     <br/>
+     <div class="instructions">
+       <li>Movements : PRESS "w-s-a-d"</li>
+       <li>Boy Special Moves : HOLD "k" to catch fireballs. PRESS Space to shoot them</li>
+       <li>Girl Special Moves : HOLD "k" to fly</li>
+       <li>Toggle Girl/Boy : PRESS "caps lock"</li>
+       <br/>
+     </div>
+     <div id="start">Click to Start</div>
+
+   </div>
+ </br>
+ </section>
   <script type="text/javascript" src="./assets/lib/bundle.js"></script>
 
 

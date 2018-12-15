@@ -60,7 +60,11 @@ const tokyoBoy = new createjs.SpriteSheet({
     "walkRight": [0, 2],
     "walkLeft": [3, 5],
     "walkUp": [6, 8],
-    "walkDown": [9, 11]
+    "walkDown": [9, 11],
+    "spin":{
+      frames: [1, 4, 7, 10],
+      next: "stand"
+    }
   //   "runLeft": [9,16],
   //   "attackRun": {
   //   frames: [0,17,18,19,20,19,18,0],
