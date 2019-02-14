@@ -1,6 +1,6 @@
 
-const tokyoBoy = require('./assets/lib/boy');
 const tokyoGirl = require('./assets/lib/girl');
+const tokyoBoy = require('./assets/lib/boy');
 const monsterman = require('./assets/lib/monster');
 const alien1 = require('./assets/lib/alien');
 const fireball = require('./assets/lib/fireball');
@@ -79,13 +79,13 @@ addPlatform(460, 440);
 addPlatform(590, 440);
 addPlatform(720, 440);
 
-addPlatform(70, 910);
-addPlatform(200, 910);
-addPlatform(330, 910);
-addPlatform(460, 910);
-addPlatform(590, 910);
-addPlatform(720, 910);
-addPlatform(850, 910);
+addPlatform(70, 710);
+addPlatform(200, 710);
+addPlatform(330, 710);
+addPlatform(460, 710);
+addPlatform(590, 710);
+addPlatform(720, 710);
+addPlatform(850, 710);
 addStairCase(240, 368);
 addStairCase(550, 50);
 addMovingPlatform(350, 250, 410, 410, 260, 100);
@@ -348,7 +348,7 @@ function changeAntigravity(){
 function resetGame(){
 
   purpleCrystal.x = 550;
-  purpleCrystal.y = 880;
+  purpleCrystal.y = 680;
   purpleCrystal.gotoAndPlay("purple");
 
   orangeCrystal.x = 800;
@@ -376,11 +376,11 @@ function resetGame(){
   // girl.scaleX = -1;
   girl.gotoAndPlay("standLeft");
 
-  stage.addChild(boy);
-  boy.gotoAndPlay("stand");
 
   monster.reset();
   boy.reset();
+  stage.addChild(boy);
+  boy.gotoAndPlay("stand");
 }
 
 
@@ -415,7 +415,7 @@ function gameTime(){
     secretPlatform.moveDown = 430;
     let idx = platforms.indexOf(secretPlatform);
     // let platform = platforms.splice(idx, 1)
-    secretPlatform.moveUp = 800;
+    secretPlatform.moveUp = 600;
     secretPlatform.moveLeft = 0;
     secretPlatform.moveRight = 0;
     movingPlatforms.push(platforms[idx]);

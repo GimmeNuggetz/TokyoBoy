@@ -1,5 +1,5 @@
 const tokyoBoy = new createjs.SpriteSheet({
-  "images": ["assets/sprites/boy.png"],
+  "images": ["assets/sprites/Boy.png"],
   "frames": [
     // x, y, width, height, imageIndex*, regX*, regY*
     //stand
