@@ -775,7 +775,7 @@ stage.addChild(greenCrystal);
 
 girl.reset = function() {
   girl.x = 760;
-  girl.y = 390;
+  girl.y = 420;
   girl.velocity = {x:0,y:10};
   girl.vX = 0;
   girl.vY = 0;
@@ -1250,11 +1250,9 @@ function changeAliens(){
     alien.y = -1000;
 
   }
-  if(calculateIntersection(boy.getBounds(), alien.getBounds()) || calculateIntersection(girl.getBounds(), alien.getBounds())){
-    girl.x = 1000;
-    boy.x = 1000;
-    resetGame();
-  }
+  // if(calculateIntersection(boy.getBounds(), alien.getBounds()) || calculateIntersection(girl.getBounds(), alien.getBounds())){
+  //
+  // }
 
 
 }
@@ -1268,7 +1266,7 @@ function changeBoy(){
 if(boy.immobile){
   setTimeout(()=> {
     boy.immobile = false;
-    hitSound.play();
+
     boy.gotoAndPlay("spin");
   }, 1000
 );
@@ -1300,6 +1298,13 @@ else{
   boy.vX = 0;
   boy.vY = 0;
 
+}
+for (var i = 0; i < aliens.length; i++) {
+  let alien = aliens[i];
+  if(calculateIntersection(boy.getBounds(), alien.getBounds())){
+    boy.reset();
+    break;
+  }
 }
 
 
@@ -1450,7 +1455,7 @@ function changeGirl(){
   if(girl.up === true){
     girl.vY -= 6;
   }
-  if(girl.y > window.innerHeight){
+  if(girl.y > window.innerHeight+1000){
     girl.reset();
   }
 
@@ -1462,6 +1467,15 @@ function changeGirl(){
   }
   girl.vX = 0;
   girl.vY = 0;
+  for (var i = 0; i < aliens.length; i++) {
+    let alien = aliens[i];
+    if(calculateIntersection(girl.getBounds(), alien.getBounds())){
+      girl.y = 2000;
+      // resetGame();
+
+    }
+  }
+
 }
 
 function changeMonster(){
@@ -1485,7 +1499,7 @@ function changeMonster(){
     if(monster.health > 0){
       monsterhit.play();
     }
-    console.log(`${monster.health}`)
+    // console.log(`${monster.health}`)
     fireball2.x = 1200;
     monster.gotoAndPlay("hit");
   }
@@ -1567,7 +1581,7 @@ function handleTick(){
   changeGirl();
   changeAliens();
   checkGravity();
-  changeAntigravity()
+  changeAntigravity();
   checkStairCase(boy);
   checkStairCase(girl);
   changeMonster();
