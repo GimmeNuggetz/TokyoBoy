@@ -1,6 +1,6 @@
 ## You-Me-Pizzaface
 
-Live Site: [https://zojitra.itch.io/you-me-pizzaface]
+[Live Site](https://zojitra.itch.io/you-me-pizzaface)
 
 ![screenshot](./pizza1.png?raw=true "gameplay")
 
